@@ -21,6 +21,8 @@ keymap.set("n", "<leader>Y", "\"+Y")
 -- replace word in file
 keymap.set("n", "<leader>q", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
+keymap.set("n", "<C-f>", "<cmd>/<C-r><C-w><cr>")
+
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 

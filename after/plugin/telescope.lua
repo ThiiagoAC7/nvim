@@ -21,7 +21,7 @@ telescope.setup{
     },
     extensions = {
         file_browser = {
-            theme = 'cursor',
+            theme = 'dropdown',
             hijack_netrw = true,
             mappings = {
                 ["n"] = {
@@ -36,6 +36,12 @@ telescope.setup{
             hidden = true,
         }
     },
+    pickers = {
+        treesitter = {
+            theme = 'dropdown',
+            previewer = false
+        }
+    }
 }
 
 telescope.load_extension('file_browser')
@@ -44,6 +50,7 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>ph', builtin.help_tags, {})
+vim.keymap.set('n', '<C-d>', builtin.treesitter)
 
 -- file browser
 
