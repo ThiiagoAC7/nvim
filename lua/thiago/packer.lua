@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
@@ -64,6 +65,12 @@ return require('packer').startup(function(use)
         use('numToStr/Comment.nvim')
 
         -- use('jose-elias-alvarez/null-ls.nvim')
+        
+        -- markdown preview
+        use({
+            "iamcco/markdown-preview.nvim",
+            run = function() vim.fn["mkdp#util#install"]() end,
+        })
 
 end)
 
