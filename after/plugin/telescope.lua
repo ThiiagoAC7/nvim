@@ -33,6 +33,7 @@ telescope.setup{
             layout_strategy = 'center',
             initial_mode = "normal",
             layout_config = { height = 0.95, width = 0.95},
+            hidden = true,
         }
     },
 }
