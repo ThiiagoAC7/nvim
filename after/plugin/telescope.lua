@@ -39,7 +39,12 @@ telescope.setup{
     pickers = {
         treesitter = {
             theme = 'dropdown',
-            previewer = false
+            previewer = false,
+            mappings = {
+                i = {
+                    ["<CR>"] = "select_default"
+                }
+            }
         }
     }
 }
