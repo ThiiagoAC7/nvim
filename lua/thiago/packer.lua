@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
 
         use('nvim-lualine/lualine.nvim') -- Fancier statusline
         use('windwp/nvim-autopairs')
+        use('windwp/nvim-ts-autotag')
         use('akinsho/nvim-bufferline.lua')
 
         use('nvim-tree/nvim-web-devicons')
