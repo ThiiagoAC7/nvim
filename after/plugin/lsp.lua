@@ -31,15 +31,22 @@ lsp.set_preferences({
 })
 
 -- lspkind icons in cmp menu
-local cmp = require('cmp')
+
 local lspkind = require('lspkind')
-cmp.setup{
+lsp.setup_nvim_cmp({
     formatting = {
         format = lspkind.cmp_format({
-            mode = 'symbol_text',
+            mode = 'symbol_text'
         })
     },
-}
+    sources = {
+        {name = 'path'},
+        {name = 'nvim_lsp'},
+        {name = 'luasnip', keyword_length = 2},
+        {name = 'buffer', keyword_length = 3},
+    }
+})
+
 
 lsp.setup()
 
