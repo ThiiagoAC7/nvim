@@ -89,3 +89,12 @@ null_ls.setup({
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>f", vim.lsp.buf.format)
+
+require("mason-null-ls").setup({
+	ensure_installed = nil,
+	automatic_installation = false, -- You can still set this to `true`
+	automatic_setup = true,
+})
+
+-- Required when `automatic_setup` is true
+require("mason-null-ls").setup_handlers()

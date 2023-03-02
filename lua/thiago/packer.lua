@@ -60,6 +60,7 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" }, -- Optional
 		},
 	})
+	use("jay-babu/mason-null-ls.nvim")
 
 	-- error messages
 	use("folke/trouble.nvim")
