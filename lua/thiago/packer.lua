@@ -66,16 +66,6 @@ return require("packer").startup(function(use)
 	use("folke/trouble.nvim")
 	use("numToStr/Comment.nvim")
 
-	-- use('jose-elias-alvarez/null-ls.nvim')
-
-	-- markdown preview
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	})
-
 	use("norcalli/nvim-colorizer.lua")
 	use("jose-elias-alvarez/null-ls.nvim")
 end)
