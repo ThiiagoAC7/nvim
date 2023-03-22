@@ -68,4 +68,12 @@ return require("packer").startup(function(use)
 
 	use("norcalli/nvim-colorizer.lua")
 	use("jose-elias-alvarez/null-ls.nvim")
+
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+	})
+
+
+
 end)
