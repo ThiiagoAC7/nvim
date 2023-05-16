@@ -13,17 +13,13 @@ return require("packer").startup(function(use)
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
 	-- set color scheme
-	use({
-		"folke/tokyonight.nvim",
-		as = "tokyonight",
-		config = function()
-			vim.cmd("colorscheme tokyonight")
-		end,
-	})
+	use({ "folke/tokyonight.nvim", as = "tokyonight" })
+	use({ "catppuccin/nvim", as = "catppuccin", config = function ()
+	  vim.cmd("colorscheme catppuccin") 
+	end})
 
 	-- treesitter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-	-- use('ThePrimeagen/harpoon')
 
 	-- git stuff
 	use("tpope/vim-fugitive")
@@ -31,8 +27,7 @@ return require("packer").startup(function(use)
 
 	use("nvim-lualine/lualine.nvim") -- Fancier statusline
 	use("windwp/nvim-autopairs")
-	use("windwp/nvim-ts-autotag")
-	use("akinsho/nvim-bufferline.lua")
+	use("akinsho/nvim-bufferline.lua", {after = "catppuccin"})
 
 	use("nvim-tree/nvim-web-devicons")
 
@@ -66,7 +61,6 @@ return require("packer").startup(function(use)
 	use("folke/trouble.nvim")
 	use("numToStr/Comment.nvim")
 
-	use("norcalli/nvim-colorizer.lua")
 	use("jose-elias-alvarez/null-ls.nvim")
 
 	use({
@@ -74,6 +68,5 @@ return require("packer").startup(function(use)
 		tag = "*",
 	})
 
-
-
+    use("lukas-reineke/indent-blankline.nvim")
 end)

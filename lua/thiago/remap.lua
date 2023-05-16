@@ -4,6 +4,8 @@ local keymap = vim.keymap
 
 keymap.set("n", "<leader><leader>", vim.cmd.so)
 
+keymap.set("n", "<leader>qa", "<cmd>qa<cr>")
+
 -- exits file
 keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
@@ -28,6 +30,12 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- jump back to older cursor pos
 keymap.set("n", "<C-j>", "<C-o>")
+
+-- close current window buffer
+vim.keymap.set("n", "<Leader>w", "<Cmd>bdelete<CR>")
+
+keymap.set({ "n", "v" }, "<S-j>", "^") -- goes to the first character of line
+keymap.set({ "n", "v" }, "<S-ç>", "$") -- end of line
 
 -- remapping to abnt layout in normal,visual and select mode
 -- hjkl -> jklç (<Left>,<Down>,<Up>,<Right>)
