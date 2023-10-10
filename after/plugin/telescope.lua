@@ -14,6 +14,7 @@ telescope.setup({
 				["k"] = actions.move_selection_next,
 				["l"] = actions.move_selection_previous,
 				["j"] = false,
+				["vs"] = actions.select_vertical,
 			},
 		},
 		layout_config = { height = 0.85, width = 0.8 },
@@ -46,6 +47,11 @@ telescope.setup({
 				},
 			},
 		},
+		lsp_definitions = {
+			theme = "dropdown",
+			previewer = false,
+			initial_mode = "normal",
+		},
 	},
 })
 
@@ -57,6 +63,11 @@ vim.keymap.set("n", "<leader>pg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
 vim.keymap.set("n", "<C-d>", builtin.treesitter)
 
+local function lsp_definitions()
+	builtin.lsp_definitions({ jump_type = "tab" })
+end
+
+vim.keymap.set("n", "<C-g>d", lsp_definitions)
 -- file browser
 
 local function telescope_buffer_dir()

@@ -68,5 +68,6 @@ return require("packer").startup(function(use)
 		tag = "*",
 	})
 
-    use("lukas-reineke/indent-blankline.nvim")
+    -- use("lukas-reineke/indent-blankline.nvim")
+    use("Exafunction/codeium.vim")
 end)

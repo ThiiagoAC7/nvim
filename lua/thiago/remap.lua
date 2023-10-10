@@ -34,8 +34,13 @@ keymap.set("n", "<C-j>", "<C-o>")
 -- close current window buffer
 vim.keymap.set("n", "<Leader>w", "<Cmd>bdelete<CR>")
 
-keymap.set({ "n", "v" }, "<S-j>", "^") -- goes to the first character of line
-keymap.set({ "n", "v" }, "<S-ç>", "$") -- end of line
+keymap.set({ "n", "v" }, "J", "^") -- goes to the first character of line
+keymap.set({ "n", "v" }, "Ç", "$") -- end of line
+
+keymap.set("n", "<S-l>", "<cmd>join<CR>")
+
+-- esc to hh
+keymap.set({"i", "n"}, "hh", "<Esc>", { silent = true })
 
 -- remapping to abnt layout in normal,visual and select mode
 -- hjkl -> jklç (<Left>,<Down>,<Up>,<Right>)
