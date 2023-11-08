@@ -40,7 +40,8 @@ keymap.set({ "n", "v" }, "Ç", "$") -- end of line
 keymap.set("n", "<S-l>", "<cmd>join<CR>")
 
 -- esc to hh
-keymap.set({"i", "n"}, "hh", "<Esc>", { silent = true })
+keymap.set({"i", "v"}, "hh", "<Esc>", { silent = true })
+keymap.set({"i", "v"}, "HH", "<Esc>", { silent = true })
 
 -- remapping to abnt layout in normal,visual and select mode
 -- hjkl -> jklç (<Left>,<Down>,<Up>,<Right>)

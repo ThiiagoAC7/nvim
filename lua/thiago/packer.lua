@@ -13,8 +13,8 @@ return require("packer").startup(function(use)
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
 	-- set color scheme
-	use({ "folke/tokyonight.nvim", as = "tokyonight" })
-	use({ "catppuccin/nvim", as = "catppuccin", config = function ()
+	use({ "folke/tokyonight.nvim", as = "tokyonight", lock = true})
+	use({ "catppuccin/nvim", as = "catppuccin", lock = true, config = function ()
 	  vim.cmd("colorscheme catppuccin") 
 	end})
 
@@ -23,11 +23,11 @@ return require("packer").startup(function(use)
 
 	-- git stuff
 	use("tpope/vim-fugitive")
-	use("lewis6991/gitsigns.nvim")
+	use({"lewis6991/gitsigns.nvim", lock=true})
 
-	use("nvim-lualine/lualine.nvim") -- Fancier statusline
+	use({"nvim-lualine/lualine.nvim", lock = true}) -- Fancier statusline
 	use("windwp/nvim-autopairs")
-	use("akinsho/nvim-bufferline.lua", {after = "catppuccin"})
+	use("akinsho/nvim-bufferline.lua", {after = "catppuccin", lock=true})
 
 	use("nvim-tree/nvim-web-devicons")
 
@@ -68,6 +68,4 @@ return require("packer").startup(function(use)
 		tag = "*",
 	})
 
-    -- use("lukas-reineke/indent-blankline.nvim")
-    use("Exafunction/codeium.vim")
 end)
