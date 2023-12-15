@@ -6,7 +6,7 @@ return require("packer").startup(function(use)
 	-- fuzzy finder
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		tag = "0.1.x",
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
@@ -55,10 +55,12 @@ return require("packer").startup(function(use)
 		},
 	})
 	use("jay-babu/mason-null-ls.nvim")
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- error messages
 	use("folke/trouble.nvim")
 	use("numToStr/Comment.nvim")
 
 	use("jose-elias-alvarez/null-ls.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
 end)
