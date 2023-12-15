@@ -23,6 +23,8 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = false
 
+vim.opt.splitright = true 
+
 -- setting powershell as default shell for windows
 if vim.loop.os_uname().sysname == "Windows_NT" then
 	local powershell_options = {

@@ -1,4 +1,5 @@
 -- color scheme config
+
 -- require("tokyonight").setup({
 -- 	style = "night",
 -- 	terminal_colors = true,
@@ -43,5 +44,9 @@ require("catppuccin").setup({
 	},
 })
 
-vim.cmd.colorscheme("catppuccin")
+
+vim.g.gruvbox_baby_background_color = 'dark'
+vim.g.gruvbox_baby_telescope_theme = true
+
+vim.cmd.colorscheme("gruvbox-baby")
 

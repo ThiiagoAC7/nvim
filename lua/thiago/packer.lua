@@ -13,21 +13,20 @@ return require("packer").startup(function(use)
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
 	-- set color scheme
-	use({ "folke/tokyonight.nvim", as = "tokyonight", lock = true})
-	use({ "catppuccin/nvim", as = "catppuccin", lock = true, config = function ()
-	  vim.cmd("colorscheme catppuccin") 
-	end})
+	use({ "folke/tokyonight.nvim", as = "tokyonight", lock = true })
+	use({ "catppuccin/nvim", as = "catppuccin", lock = true })
+	use({ "luisiacc/gruvbox-baby", as = "gruvbox", lock = true })
 
 	-- treesitter
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
 	-- git stuff
 	use("tpope/vim-fugitive")
-	use({"lewis6991/gitsigns.nvim", lock=true})
+	use({ "lewis6991/gitsigns.nvim", lock = true })
 
-	use({"nvim-lualine/lualine.nvim", lock = true}) -- Fancier statusline
+	use({ "nvim-lualine/lualine.nvim", lock = true }) -- Fancier statusline
 	use("windwp/nvim-autopairs")
-	use("akinsho/nvim-bufferline.lua", {after = "catppuccin", lock=true})
+	use("akinsho/nvim-bufferline.lua", { after = "catppuccin", lock = true })
 
 	use("nvim-tree/nvim-web-devicons")
 
@@ -62,10 +61,4 @@ return require("packer").startup(function(use)
 	use("numToStr/Comment.nvim")
 
 	use("jose-elias-alvarez/null-ls.nvim")
-
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-	})
-
 end)

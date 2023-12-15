@@ -5,8 +5,6 @@ local catppuccin_colors = {
 	limiters = "#df8e1d",
 }
 
--- Color table for highlights
--- stylua: ignore
 local colors = {
     bg       = '#202328',
     fg       = '#bbc2cf',
@@ -64,7 +62,7 @@ local diagnostics = {
 
 lualine.setup({
 	options = {
-		theme = bubbles_theme,
+		theme = 'gruvbox-baby',
 		component_separators = "|",
 		section_separators = { left = "", right = "" },
         globalstatus = true,
