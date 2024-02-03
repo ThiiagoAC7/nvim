@@ -38,15 +38,13 @@ require("catppuccin").setup({
 		cmp = true,
 		gitsigns = true,
 		telescope = true,
-        lsp_trouble = true,
-        mason = true,
-        treesitter = true,
+		lsp_trouble = true,
+		mason = true,
+		treesitter = true,
 	},
 })
 
-
-vim.g.gruvbox_baby_background_color = 'dark'
+vim.g.gruvbox_baby_background_color = "dark"
 vim.g.gruvbox_baby_telescope_theme = true
 
 vim.cmd.colorscheme("gruvbox-baby")
-

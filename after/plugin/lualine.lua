@@ -6,18 +6,18 @@ local catppuccin_colors = {
 }
 
 local colors = {
-    bg       = '#202328',
-    fg       = '#bbc2cf',
-    yellow   = '#ECBE7B',
-    cyan     = '#008080',
-    darkblue = '#081633',
-    green    = '#98be65',
-    orange   = '#FF8800',
-    violet   = '#a9a1e1',
-    magenta  = '#c678dd',
-    blue     = '#51afef',
-    red      = '#ec5f67',
-    greyish  = '#2f2f39',
+	bg = "#202328",
+	fg = "#bbc2cf",
+	yellow = "#ECBE7B",
+	cyan = "#008080",
+	darkblue = "#081633",
+	green = "#98be65",
+	orange = "#FF8800",
+	violet = "#a9a1e1",
+	magenta = "#c678dd",
+	blue = "#51afef",
+	red = "#ec5f67",
+	greyish = "#2f2f39",
 }
 
 local bubbles_theme = {
@@ -62,10 +62,10 @@ local diagnostics = {
 
 lualine.setup({
 	options = {
-		theme = 'gruvbox-baby',
+		theme = "gruvbox-baby",
 		component_separators = "|",
 		section_separators = { left = "", right = "" },
-        globalstatus = true,
+		globalstatus = true,
 	},
 	sections = {
 		lualine_a = {

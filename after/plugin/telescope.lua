@@ -11,9 +11,6 @@ telescope.setup({
 			},
 			n = {
 				["q"] = actions.close,
-				["k"] = actions.move_selection_next,
-				["l"] = actions.move_selection_previous,
-				["j"] = false,
 				["vs"] = actions.select_vertical,
 			},
 		},
@@ -57,9 +54,9 @@ telescope.setup({
 telescope.load_extension("file_browser")
 
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
-vim.keymap.set("n", "<leader>pg", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
-vim.keymap.set("n", "<leader>pe", telescope.extensions.file_browser.file_browser, {})
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+vim.keymap.set("n", "<leader>fe", telescope.extensions.file_browser.file_browser, {})
 vim.keymap.set("n", "<C-d>", builtin.treesitter)
 vim.keymap.set("n", "<leader>gc", builtin.git_commits)

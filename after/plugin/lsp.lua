@@ -78,32 +78,15 @@ local sources = {
 	formatting.eslint_d,
 	formatting.stylua,
 }
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
 	sources = sources,
-	-- on_attach = function(client, bufnr)
-	-- 	if client.supports_method("textDocument/formatting") then
-	-- 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-	-- 		vim.api.nvim_create_autocmd("BufWritePre", {
-	-- 			group = augroup,
-	-- 			buffer = bufnr,
-	-- 			callback = function()
-	-- 				-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-	-- 				vim.lsp.buf.format({ bufnr = bufnr })
-	-- 			end,
-	-- 		})
-	-- 	end
-	-- end,
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>f", vim.lsp.buf.format)
 
 require("mason-null-ls").setup({
 	ensure_installed = nil,
-	automatic_installation = false, -- You can still set this to `true`
+	automatic_installation = false,
 	automatic_setup = true,
 })
-
--- Required when `automatic_setup` is true
--- require("mason-null-ls").setup_handlers()

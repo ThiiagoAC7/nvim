@@ -23,7 +23,7 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = false
 
-vim.opt.splitright = true 
+vim.opt.splitright = true
 
 -- setting powershell as default shell for windows
 if vim.loop.os_uname().sysname == "Windows_NT" then
@@ -40,3 +40,6 @@ if vim.loop.os_uname().sysname == "Windows_NT" then
 		vim.opt[option] = value
 	end
 end
+
+-- netrw
+vim.g.netrw_banner = 0
