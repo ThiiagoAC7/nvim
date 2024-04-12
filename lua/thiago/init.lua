@@ -1,3 +1,4 @@
 require("thiago.remap")
 require("thiago.set")
-require("thiago.packer")
+require("thiago.lazy_init")
+

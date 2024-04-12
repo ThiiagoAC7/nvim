@@ -37,8 +37,6 @@ vim.keymap.set("n", "<Leader>w", "<Cmd>bdelete<CR>")
 keymap.set({ "n", "v" }, "H", "^") -- goes to the first character of line
 keymap.set({ "n", "v" }, "L", "g_") -- end of line at the last non whitespace character
 
-keymap.set("n", "<S-k>", "<cmd>join<CR>")
-
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
