@@ -12,6 +12,7 @@ return {
 				"vimdoc",
 				"python",
 				"javascript",
+				"rust",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
