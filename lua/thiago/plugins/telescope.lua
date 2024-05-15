@@ -28,6 +28,7 @@ return {
 					n = {
 						["q"] = actions.close,
 						["vs"] = actions.select_vertical,
+						["hs"] = actions.select_horizontal,
 					},
 				},
 			},

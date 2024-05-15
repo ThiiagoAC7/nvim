@@ -79,6 +79,28 @@ return {
 			})
 
 			vim.keymap.set("n", "<leader>ex", "<cmd>Oil<CR>")
+			vim.keymap.set("n", "<leader>fe", oil.toggle_float)
+		end,
+	},
+
+	-- lazy.nvim
+	{
+		"lervag/vimtex",
+		init = function()
+			vim.g.vimtex_view_method = "zathura"
+		end,
+	},
+
+	{
+		"Exafunction/codeium.vim",
+		event = "BufEnter",
+		config = function()
+			vim.keymap.set("i", "<C-y>", function()
+				return vim.fn["codeium#Accept"]()
+			end, { expr = true, silent = true })
+			vim.keymap.set("i", "<C-n>", function()
+				return vim.fn["codeium#Clear"]()
+			end, { expr = true, silent = true })
 		end,
 	},
 }
