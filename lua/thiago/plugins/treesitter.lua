@@ -47,4 +47,5 @@ return {
 			max_lines = 1,
 		},
 	},
+
 }

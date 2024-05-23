@@ -7,7 +7,7 @@ return {
 				options = {
 					component_separators = "",
 					section_separators = "",
-					theme = "tokyonight",
+					theme = "gruvbox",
 				},
 				sections = {
 					lualine_a = {
@@ -18,6 +18,12 @@ return {
 							end,
 						},
 					},
+                    lualine_c = {
+                        {
+                            "filename",
+                            path = 1,
+                        },
+                    },
 					lualine_x = { "encoding", "fileformat" },
 					lualine_y = { "" },
 					lualine_z = { "location" },

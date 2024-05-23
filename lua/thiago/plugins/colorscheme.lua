@@ -10,6 +10,7 @@ return {
 				keywordStyle = { italic = false },
 				functionStyle = { italic = false },
 				typeStyle = { italic = false },
+                transparent = true,
 
 				overrides = function(colors)
 					local theme = colors.theme
@@ -22,6 +23,29 @@ return {
 				end,
 			})
 		end,
+        -- init = function()
+        --     vim.cmd.colorscheme("kanagawa-dragon")
+        -- end,
+	},
+
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = true,
+		opts = {
+			italic = {
+				strings = false,
+				emphasis = false,
+				comments = false,
+				folds = false,
+			},
+            inverse = false,
+            contrast = "hard",
+            transparent_mode = true,
+		},
+        init = function()
+            vim.cmd.colorscheme("gruvbox")
+        end,
 	},
 
 	{
@@ -36,8 +60,8 @@ return {
 				keywords = { italic = false },
 			},
 		},
-		init = function()
-			vim.cmd.colorscheme("tokyonight")
-		end,
+        -- init = function()
+        --     vim.cmd.colorscheme("tokyonight")
+        -- end,
 	},
 }

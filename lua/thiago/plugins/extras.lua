@@ -83,7 +83,6 @@ return {
 		end,
 	},
 
-	-- lazy.nvim
 	{
 		"lervag/vimtex",
 		init = function()
@@ -92,15 +91,25 @@ return {
 	},
 
 	{
-		"Exafunction/codeium.vim",
-		event = "BufEnter",
+		"supermaven-inc/supermaven-nvim",
 		config = function()
-			vim.keymap.set("i", "<C-y>", function()
-				return vim.fn["codeium#Accept"]()
-			end, { expr = true, silent = true })
-			vim.keymap.set("i", "<C-n>", function()
-				return vim.fn["codeium#Clear"]()
-			end, { expr = true, silent = true })
+			require("supermaven-nvim").setup({
+				keymaps = {
+					accept_suggestion = "<Tab>",
+					clear_suggestion = "<C-n>",
+					accept_word = "<C-j>",
+				},
+				ignore_filetypes = {
+					markdown = true,
+					txt = true,
+					oil = true,
+					tex = true,
+				},
+				color = {
+					suggestion_color = "#828282",
+					cterm = 244,
+				},
+			})
 		end,
 	},
 }
