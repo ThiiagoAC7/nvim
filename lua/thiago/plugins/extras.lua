@@ -1,89 +1,6 @@
 return {
 
 	{
-		"numToStr/Comment.nvim",
-		lazy = false,
-		opts = {},
-	},
-
-	{
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		config = function()
-			local harpoon = require("harpoon")
-
-			harpoon:setup()
-
-			vim.keymap.set("n", "<leader>a", function()
-				harpoon:list():add()
-			end)
-			vim.keymap.set("n", "<C-e>", function()
-				harpoon.ui:toggle_quick_menu(harpoon:list())
-			end)
-
-			vim.keymap.set("n", "<C-h>", function()
-				harpoon:list():select(1)
-			end)
-			vim.keymap.set("n", "<C-j>", function()
-				harpoon:list():select(2)
-			end)
-			vim.keymap.set("n", "<C-n>", function()
-				harpoon:list():select(3)
-			end)
-			vim.keymap.set("n", "<C-b>", function()
-				harpoon:list():select(4)
-			end)
-		end,
-	},
-
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		ft = { "markdown" },
-		build = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	},
-
-	{
-		"stevearc/oil.nvim",
-		config = function()
-			local oil = require("oil")
-			oil.setup({
-				default_file_explorer = true,
-				columns = {
-					"size",
-					"permissions",
-					"icon",
-				},
-				skip_confirm_for_simple_edits = true,
-				use_default_keymaps = false,
-				view_options = { show_hidden = true },
-				keymaps = {
-					["g?"] = "actions.show_help",
-					["<CR>"] = "actions.select",
-					["vs"] = "actions.select_vsplit",
-					["hs"] = "actions.select_split",
-					["<C-t>"] = "actions.select_tab",
-					["<C-p>"] = "actions.preview",
-					["q"] = "actions.close",
-					["<C-l>l"] = "actions.refresh",
-					["-"] = "actions.parent",
-					["_"] = "actions.open_cwd",
-					["`"] = "actions.cd",
-					["~"] = "actions.tcd",
-					["gs"] = "actions.change_sort",
-					["gx"] = "actions.open_external",
-					["g."] = "actions.toggle_hidden",
-				},
-			})
-
-			vim.keymap.set("n", "<leader>ex", "<cmd>Oil<CR>")
-			vim.keymap.set("n", "<leader>fe", oil.toggle_float)
-		end,
-	},
-
-	{
 		"lervag/vimtex",
 		init = function()
 			vim.g.vimtex_view_method = "zathura"
@@ -112,4 +29,56 @@ return {
 			})
 		end,
 	},
+
+	{ "rust-lang/rust.vim" },
+
+    {
+        'MeanderingProgrammer/markdown.nvim',
+        name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+        config = function()
+            require('render-markdown').setup({})
+        end,
+    },
+
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
+
+	-- {
+	-- 	"wookayin/semshi", -- maintained fork
+	-- 	ft = "python",
+	-- 	build = ":UpdateRemotePlugins", -- don't disable `rplugin` in lazy.nvim for this
+	-- 	init = function()
+	-- 		vim.g.python3_host_prog = vim.fn.exepath("python3")
+	-- 		-- better done by LSP
+	-- 		vim.g["semshi#error_sign"] = false
+	-- 		vim.g["semshi#simplify_markup"] = false
+	-- 		vim.g["semshi#mark_selected_nodes"] = false
+	-- 		vim.g["semshi#update_delay_factor"] = 0.001
+	--
+	-- 		vim.api.nvim_create_autocmd({ "VimEnter", "ColorScheme" }, {
+	-- 			callback = function()
+	-- 				vim.cmd([[
+	-- 					highlight! semshiGlobal gui=italic
+	-- 					highlight! link semshiImported @lsp.type.namespace
+	-- 					highlight! link semshiParameter @lsp.type.parameter
+	-- 					highlight! link semshiParameterUnused DiagnosticUnnecessary
+	-- 					highlight! link semshiBuiltin @function.builtin
+	-- 					highlight! link semshiAttribute @field
+	-- 					highlight! link semshiSelf @lsp.type.selfKeyword
+	-- 					highlight! link semshiUnresolved @lsp.type.unresolvedReference
+	-- 					highlight! link semshiFree @comment
+	-- 				]])
+	-- 			end,
+	-- 		})
+	-- 	end,
+	-- },
 }

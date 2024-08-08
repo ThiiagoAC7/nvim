@@ -1,11 +1,12 @@
 return {
 	"folke/trouble.nvim",
-	config = function()
-		local trouble = require("trouble")
-		trouble.setup({
-			mode = "document_diagnostics",
-		})
-
-		vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>")
-	end,
+    opts = {},
+    cmd = "Trouble",
+    keys = {
+        {
+          "<leader>t",
+          "<cmd>Trouble diagnostics toggle<cr>",
+          desc = "Diagnostics (Trouble)",
+        },
+    },
 }

@@ -2,8 +2,6 @@ vim.opt.compatible = false
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
--- vim.opt.colorcolumn = "100"
-
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -24,7 +22,7 @@ vim.opt.showtabline = 2
 
 vim.opt.signcolumn = "yes"
 
-vim.opt.wrap = false
+vim.opt.wrap = true 
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -47,5 +45,6 @@ vim.g.have_nerd_font = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- Show which line your cursor is on
--- vim.opt.cursorline = true
+-- Show which line your cursor is on + vertical column
+vim.opt.colorcolumn = "100"
+vim.opt.cursorline = true

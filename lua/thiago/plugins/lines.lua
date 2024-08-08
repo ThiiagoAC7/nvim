@@ -7,7 +7,7 @@ return {
 				options = {
 					component_separators = "",
 					section_separators = "",
-					theme = "gruvbox",
+					theme = "tokyonight",
 				},
 				sections = {
 					lualine_a = {
@@ -18,12 +18,12 @@ return {
 							end,
 						},
 					},
-                    lualine_c = {
-                        {
-                            "filename",
-                            path = 1,
-                        },
-                    },
+					lualine_c = {
+						{
+							"filename",
+							path = 1,
+						},
+					},
 					lualine_x = { "encoding", "fileformat" },
 					lualine_y = { "" },
 					lualine_z = { "location" },
@@ -78,9 +78,12 @@ return {
 				char = "│",
 				tab_char = "│",
 			},
-			scope = { enabled = false },
+			scope = {
+				enabled = false,
+                show_exact_scope = true,
+			},
 			exclude = {
-				filetypes = { "help", "terminal", "lspinfo", "TelescopePrompt", "TelescopeResults" },
+				filetypes = { "help", "terminal", "lspinfo", "TelescopePrompt", "TelescopeResults", "markdown" },
 				buftypes = { "terminal" },
 			},
 		},

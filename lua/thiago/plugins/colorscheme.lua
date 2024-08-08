@@ -10,7 +10,7 @@ return {
 				keywordStyle = { italic = false },
 				functionStyle = { italic = false },
 				typeStyle = { italic = false },
-                transparent = true,
+				transparent = true,
 
 				overrides = function(colors)
 					local theme = colors.theme
@@ -23,9 +23,9 @@ return {
 				end,
 			})
 		end,
-        -- init = function()
-        --     vim.cmd.colorscheme("kanagawa-dragon")
-        -- end,
+		-- init = function()
+		--     vim.cmd.colorscheme("kanagawa-dragon")
+		-- end,
 	},
 
 	{
@@ -39,13 +39,13 @@ return {
 				comments = false,
 				folds = false,
 			},
-            inverse = false,
-            contrast = "hard",
-            transparent_mode = true,
+			inverse = false,
+			contrast = "hard",
+			transparent_mode = true,
 		},
-        init = function()
-            vim.cmd.colorscheme("gruvbox")
-        end,
+		-- init = function()
+		--     vim.cmd.colorscheme("gruvbox")
+		-- end,
 	},
 
 	{
@@ -58,10 +58,12 @@ return {
 			styles = {
 				comments = { italic = false },
 				keywords = { italic = false },
+				sidebars = "transparent",
+				floats = "transparent",
 			},
 		},
-        -- init = function()
-        --     vim.cmd.colorscheme("tokyonight")
-        -- end,
+		init = function()
+			vim.cmd.colorscheme("tokyonight")
+		end,
 	},
 }
