@@ -113,8 +113,7 @@ return {
 						},
 					},
 				},
-				rust_analyzer = {},
-				tsserver = {},
+				ts_ls = {},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
@@ -128,6 +127,11 @@ return {
 						},
 					},
 				},
+				texlab = {},
+                ltex = { -- https://ltex-plus.github.io/ltex-plus/settings.html
+                    enabled = {"bibtex", "markdown", "tex", "latex"},
+                    dictionary = {}, -- add words to be ignored: {"<LANGUAGE1>": ["<WORD1>", "<WORD2>", ...] }
+                }
 			}
 
 			-- Ensure the servers and tools above are installed
@@ -145,7 +149,6 @@ return {
 				"stylua",
 				"autopep8",
 				"isort",
-				"tsserver",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -193,6 +196,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "autopep8" },
 				javascript = { { "prettierd", "prettier" } },
+				cpp = { "clang-format" },
 			},
 		},
 	},

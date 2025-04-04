@@ -43,9 +43,9 @@ return {
 			contrast = "hard",
 			transparent_mode = true,
 		},
-		-- init = function()
-		--     vim.cmd.colorscheme("gruvbox")
-		-- end,
+		init = function()
+		    vim.cmd.colorscheme("gruvbox")
+		end,
 	},
 
 	{
@@ -58,12 +58,27 @@ return {
 			styles = {
 				comments = { italic = false },
 				keywords = { italic = false },
-				sidebars = "transparent",
-				floats = "transparent",
+				-- sidebars = "transparent",
+				-- floats = "transparent",
 			},
 		},
-		init = function()
-			vim.cmd.colorscheme("tokyonight")
-		end,
+		-- init = function()
+		-- 	vim.cmd.colorscheme("tokyonight")
+		-- end,
+	},
+
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		priority = 1000,
+		opts = {
+			variant = "main",
+			styles = {
+				italic = false,
+			},
+		},
+		-- init = function()
+		-- 	vim.cmd.colorscheme("rose-pine")
+		-- end,
 	},
 }

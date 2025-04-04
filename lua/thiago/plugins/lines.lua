@@ -7,7 +7,7 @@ return {
 				options = {
 					component_separators = "",
 					section_separators = "",
-					theme = "tokyonight",
+					theme = "gruvbox",
 				},
 				sections = {
 					lualine_a = {
