@@ -22,7 +22,7 @@ vim.opt.showtabline = 2
 
 vim.opt.signcolumn = "yes"
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true

@@ -128,10 +128,14 @@ return {
 					},
 				},
 				texlab = {},
-                ltex = { -- https://ltex-plus.github.io/ltex-plus/settings.html
-                    enabled = {"bibtex", "markdown", "tex", "latex"},
-                    dictionary = {}, -- add words to be ignored: {"<LANGUAGE1>": ["<WORD1>", "<WORD2>", ...] }
-                }
+				-- ltex = {
+				-- 	settings = {
+				--                     ltex = {
+				--                         enabled = { "bibtex", "tex", "latex" },
+				--                         -- dictionary = {}, -- add words to be ignored: {"<LANGUAGE1>": ["<WORD1>", "<WORD2>", ...] }
+				--                     }
+				-- 	},
+				-- },
 			}
 
 			-- Ensure the servers and tools above are installed
