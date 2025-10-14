@@ -80,7 +80,7 @@ return {
 			},
 			scope = {
 				enabled = false,
-                show_exact_scope = true,
+				show_exact_scope = true,
 			},
 			exclude = {
 				filetypes = { "help", "terminal", "lspinfo", "TelescopePrompt", "TelescopeResults", "markdown" },
