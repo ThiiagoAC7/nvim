@@ -9,7 +9,7 @@ return {
 		end,
 	},
 
-	{ "rust-lang/rust.vim" },
+	-- { "rust-lang/rust.vim" },
 
 	{
 		"iamcco/markdown-preview.nvim",
