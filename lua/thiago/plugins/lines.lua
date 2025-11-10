@@ -79,7 +79,7 @@ return {
 				tab_char = "│",
 			},
 			scope = {
-				enabled = false,
+				enabled = true,
 				show_exact_scope = true,
 			},
 			exclude = {

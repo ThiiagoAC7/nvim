@@ -307,7 +307,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "isort", "autopep8" },
-				javascript = { { "prettierd", "prettier" } },
+				javascript = { "prettierd", "prettier" },
 				cpp = { "clang-format" },
 			},
 		},

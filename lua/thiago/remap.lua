@@ -57,6 +57,5 @@ keymap.set("n", "<M-.>", "<C-w>5>")
 keymap.set("n", "<M-w>", "<C-w>+")
 keymap.set("n", "<M-s>", "<C-w>-")
 
-
 -- ctrl z to u
 keymap.set("n", "<C-z>", "u")
