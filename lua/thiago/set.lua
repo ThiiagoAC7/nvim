@@ -22,7 +22,7 @@ vim.opt.showtabline = 2
 
 vim.opt.signcolumn = "yes"
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -37,7 +37,7 @@ vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
 
 -- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false 
+vim.opt.showmode = false
 
 vim.g.have_nerd_font = true
 

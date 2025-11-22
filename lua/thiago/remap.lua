@@ -52,10 +52,10 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- resize split windows
-keymap.set("n", "<M-,>", "<C-w>5<")
-keymap.set("n", "<M-.>", "<C-w>5>")
-keymap.set("n", "<M-w>", "<C-w>+")
-keymap.set("n", "<M-s>", "<C-w>-")
+-- keymap.set("n", "<M-,>", "<C-w>5<")
+-- keymap.set("n", "<M-.>", "<C-w>5>")
+-- keymap.set("n", "<M-w>", "<C-w>+")
+-- keymap.set("n", "<M-s>", "<C-w>-")
 
 -- ctrl z to u
 keymap.set("n", "<C-z>", "u")

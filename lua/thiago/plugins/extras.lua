@@ -9,8 +9,6 @@ return {
 		end,
 	},
 
-	-- { "rust-lang/rust.vim" },
-
 	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },

@@ -308,8 +308,11 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "autopep8" },
 				javascript = { "prettierd", "prettier" },
+				c = { "clang-format" },
 				cpp = { "clang-format" },
+				json = { "prettierd" },
 			},
+			formatters = {},
 		},
 	},
 

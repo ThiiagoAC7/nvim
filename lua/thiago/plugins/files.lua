@@ -61,11 +61,13 @@ return {
 					["gx"] = "actions.open_external",
 					["g."] = "actions.toggle_hidden",
 				},
+				float = {
+					border = "rounded",
+				},
 			})
 
 			vim.keymap.set("n", "<leader>ex", "<cmd>Oil<CR>")
 			vim.keymap.set("n", "<leader>fe", oil.toggle_float)
 		end,
 	},
-
 }
