@@ -137,8 +137,9 @@ return {
 
 			-- Enable the following language servers
 			local servers = {
-				ty = {},
-				ruff = {},
+				-- ty = {},
+				-- ruff = {},
+				basedpyright = {},
 				-- ts_ls = {},
 				lua_ls = {
 					-- cmd = {...},
@@ -163,6 +164,8 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
+				"autopep8",
+				"isort",
 			})
 
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

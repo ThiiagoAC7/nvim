@@ -2,7 +2,25 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
+			local function lsp_name()
+				local message = "LSP: "
+				local get_clients = vim.lsp.get_clients
+				local clients = get_clients({ bufnr = 0 })
+
+				if next(clients) == nil then
+					return message .. "none"
+				end
+
+				local client_names = {}
+				for _, client in ipairs(clients) do
+					table.insert(client_names, client.name)
+				end
+
+				return message .. table.concat(client_names, ", ")
+			end
+
 			local lualine = require("lualine")
+
 			lualine.setup({
 				options = {
 					component_separators = "",
@@ -25,7 +43,7 @@ return {
 						},
 					},
 					lualine_x = { "encoding", "fileformat" },
-					lualine_y = { "" },
+					lualine_y = { lsp_name },
 					lualine_z = { "location" },
 				},
 			})
