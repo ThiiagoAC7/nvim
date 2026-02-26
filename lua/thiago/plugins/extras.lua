@@ -9,6 +9,8 @@ return {
 		end,
 	},
 
+	-- { "ziglang/zig.vim" },
+
 	{
 		"iamcco/markdown-preview.nvim",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },

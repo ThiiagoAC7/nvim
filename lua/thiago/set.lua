@@ -48,3 +48,5 @@ vim.opt.smartcase = true
 -- Show which line your cursor is on + vertical column
 vim.opt.colorcolumn = "100"
 vim.opt.cursorline = true
+
+vim.g.python3_host_prog = vim.fn.expand("~/.pixi/bin/python")
