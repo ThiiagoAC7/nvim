@@ -137,7 +137,8 @@ return {
 
 			-- Enable the following language servers
 			local servers = {
-				pyright = {},
+				ruff = {},
+				jedi_language_server = {},
 				-- ts_ls = {},
 				lua_ls = {
 					-- cmd = {...},
@@ -149,7 +150,19 @@ return {
 						},
 					},
 				},
-				texlab = {},
+				texlab = {
+					settings = {
+						texlab = {
+							formatter = {
+								latexFormatter = "latexindent",
+								latexindent = {
+									["local"] = vim.fn.expand("~/.config/nvim/.indentconfig.yaml"),
+									modifyLineBreaks = true,
+								},
+							},
+						},
+					},
+				},
 			}
 
 			-- Ensure the servers and tools above are installed
@@ -227,7 +240,14 @@ return {
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true, python = true }
+				local disable_filetypes = {
+					c = true,
+					cpp = true,
+					python = true,
+					tex = true,
+					markdown = true,
+					rust = true,
+				}
 				if disable_filetypes[vim.bo[bufnr].filetype] then
 					return nil
 				else
@@ -243,7 +263,14 @@ return {
 				python = { "ruff_format", "ruff_organize_imports" },
 				--
 				-- You can use 'stop_after_first' to run the first available formatter from the list
-				-- javascript = { "prettierd", "prettier", stop_after_first = true },
+				javascript = { "prettierd", "prettier", stop_after_first = true },
+				markdown = { "prettierd" },
+				json = { "prettierd" },
+				tex = { "latexindent" },
+			},
+			formatters = {
+				prettierd = require("thiago.formatters.prettierd"),
+				latexindent = require("thiago.formatters.latexindent"),
 			},
 		},
 	},
@@ -270,12 +297,12 @@ return {
 					-- `friendly-snippets` contains a variety of premade snippets.
 					--    See the README about individual language/framework/plugin snippets:
 					--    https://github.com/rafamadriz/friendly-snippets
-					-- {
-					--   'rafamadriz/friendly-snippets',
-					--   config = function()
-					--     require('luasnip.loaders.from_vscode').lazy_load()
-					--   end,
-					-- },
+					{
+						"rafamadriz/friendly-snippets",
+						config = function()
+							require("luasnip.loaders.from_vscode").lazy_load()
+						end,
+					},
 				},
 				opts = {},
 			},

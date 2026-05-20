@@ -6,6 +6,7 @@ return {
 			vim.g.vimtex_view_method = "zathura"
 			-- vim.g.vimtex_quickfix_mode = 0 -- dont open quickfix window automatically
 			vim.g.vimtex_quickfix_autoclose_after_keystrokes = 1
+			vim.g.vimtex_quickfix_mode = 0
 		end,
 	},
 
@@ -18,6 +19,14 @@ return {
 		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
+	},
+
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+		opts = {
+			heading = { position = "inline", backgrounds = {} },
+		},
 	},
 
 	{

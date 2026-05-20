@@ -1,0 +1,14 @@
+onlyOneBackUp: 0
+maxNumberOfBackUps: 3
+cycleThroughBackUps: 1
+
+# enable the modify line breaks (-m) switch from within the config file
+switchesViaYaml:
+  mSwitch: 1
+
+# configure text wrapping
+modifyLineBreaks:
+  textWrapOptions:
+    columns: 100
+    removeBlockLineBreaks: 1
+    multipleSpacesToSingle: 1

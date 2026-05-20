@@ -50,3 +50,11 @@ vim.opt.colorcolumn = "100"
 vim.opt.cursorline = true
 
 vim.g.python3_host_prog = vim.fn.expand("~/.pixi/bin/python")
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "markdown", "text", "tex" },
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.opt_local.textwidth = 100
+	end,
+})
