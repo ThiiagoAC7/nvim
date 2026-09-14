@@ -22,7 +22,7 @@ vim.opt.showtabline = 2
 
 vim.opt.signcolumn = "yes"
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -52,7 +52,7 @@ vim.opt.cursorline = true
 vim.g.python3_host_prog = vim.fn.expand("~/.pixi/bin/python")
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "markdown", "text", "tex" },
+	pattern = { "markdown", "text" },
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.opt_local.textwidth = 100

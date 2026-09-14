@@ -140,6 +140,7 @@ return {
 				ruff = {},
 				jedi_language_server = {},
 				-- ts_ls = {},
+				gopls = {},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
